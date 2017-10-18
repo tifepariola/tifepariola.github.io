@@ -28,43 +28,49 @@
 			</div>
 		</div>
 	</div>
+	<footer class="footer">
+      <div class="container text-center">
+        <span class="text-muted">Developed with <span class="heart">&#10084</span> by <a href="http://tife.pario.la/">'TiFe Pariola</a></span>
+      </div>
+    </footer>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="assets/js/owl.carousel.js"></script>
 	<script>
 		$(document).ready(function () {
+			window.addEventListener('keydown',function(e) {
+				if (e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13) {
+					if (e.target.nodeName=='INPUT'&&e.target.type=='text') {
+						e.preventDefault();
+						$('input[type="text"]').each(function () {
+							if ($(this).val() != "") {
+								$('small.form-text').remove();
+								var reach = $(document).height() / 2;
+								var n = Math.abs(parseFloat($("div.searchField").css("margin-top")));
+								if (n != reach) {
+									$('div.searchField').animate({
+										marginTop: '-=' + reach
+									}, 1000, function () {
 
-			$(window).keydown(function (event) {
-				if (event.keyCode == 13) {
-					event.preventDefault();
-					$('input[type="text"]').each(function () {
-						if ($(this).val() != "") {
-							$('small.form-text').remove();
-							var reach = $(document).height() / 2;
-							var n = Math.abs(parseFloat($("div.searchField").css("margin-top")));
-							if (n != reach) {
-								$('div.searchField').animate({
-									marginTop: '-=' + reach
-								}, 1000, function () {
-
-									// $.ajax({
-									// 	url: 'products.html',
-									// 	success: function (data) {
-									// 		// $('#fill').innerHTML = "data";
-									// 		document.getElementById("fill").innerHTML = data;
-									// 		alert(data);
-									// 	}
-									// });
-								});
+										// $.ajax({
+										// 	url: 'products.html',
+										// 	success: function (data) {
+										// 		// $('#fill').innerHTML = "data";
+										// 		document.getElementById("fill").innerHTML = data;
+										// 		alert(data);
+										// 	}
+										// });
+									});
+								}
+						$('.loader').show();
+						if ($('.results')) {
+							$('.results').remove();
+						};
+								callScraper();
 							}
-					$('.loader').show();
-					if ($('.results')) {
-						$('.results').remove();
-					};
-							callScraper();
-						}
-					});
+						});
+					}
 				}
-			});
+			},true);
 		});
 
 		function callScraper() {
