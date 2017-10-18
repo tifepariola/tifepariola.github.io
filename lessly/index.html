@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Lessly - Best Price, Always!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/owlcarousel/owl.theme.default.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+</head>
+
+<body>
+	<div class="container h-100">
+		<div class="row h-100 justify-content-center align-items-center fill">
+			<div class="col-lg-6 searchField">
+				<img src="assets/img/logo.png" class="mx-auto d-block" style="height: 60px; margin-bottom: 5px;">
+				<form>
+					<div class="form-group">
+						<input type="text" id="searchQuery" class="form-control" id="animate" aria-describedby="searchHelp" autocomplete="off" placeholder="Enter product name...">
+						<small id="searchHelp" class="form-text text-muted text-right">Hit 'Enter' when done.</small>
+					</div>
+				</form>
+				<div class="col-lg-12 text-center loader" style="position: absolute; display: none;">
+				<img src="assets/img/loading.gif" />
+			</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$(window).keydown(function (event) {
+				if (event.keyCode == 13) {
+					event.preventDefault();
+					$('input[type="text"]').each(function () {
+						if ($(this).val() != "") {
+							$('small.form-text').remove();
+							var reach = $(document).height() / 2;
+							var n = Math.abs(parseFloat($("div.searchField").css("margin-top")));
+							if (n != reach) {
+								$('div.searchField').animate({
+									marginTop: '-=' + reach
+								}, 1000, function () {
+
+									// $.ajax({
+									// 	url: 'products.html',
+									// 	success: function (data) {
+									// 		// $('#fill').innerHTML = "data";
+									// 		document.getElementById("fill").innerHTML = data;
+									// 		alert(data);
+									// 	}
+									// });
+								});
+							}
+					$('.loader').show();
+					if ($('.results')) {
+						$('.results').remove();
+					};
+							callScraper();
+						}
+					});
+				}
+			});
+		});
+
+		function callScraper() {
+			var query = $('#searchQuery').val().replace(/\ /g, '+');
+			$.ajax({
+				url: "https://sheltered-dusk-25480.herokuapp.com/scrape?q=" + query,
+				beforeSend: function (xhr) {
+					xhr.overrideMimeType("application/json");
+				}
+			})
+				.done(function (data) {
+					$('.loader').hide();
+					var final = "<div class='row results owl-carousel'>";
+					for (var i = 0; i < data.length; i++) {
+						var item = data[i];
+						if (item.store == "konga") {
+							var store = "<a href='https://konga.com/' target='_blank'>Konga</a>";
+						} else if (item.store == "jumia") {
+							var store = "<a href='https://jumia.com.ng/' target='_blank'>Jumia</a>";
+						} else if (item.store == "payporte") {
+							var store = "<a href='https://payporte.com/' target='_blank'>Payporte</a>";
+						} else if (item.store == "invoo") {
+							var store = "<a href='https://invoo.com.ng/' target='_blank'>Invoo</a>";
+						}
+						var xxx = "<div class='col-md-12'><div class='card'><div class='card-block'><div class='row'><div class='col-md-9 product-details'>";
+						xxx += "<h6 class='card-title dont-break'>" + item.product_name + "</h6>";
+						xxx += "<span class='text-muted'>&#8358;" + item.product_price + "</span> | ";
+						xxx += "<a href='" + item.product_link + "'>Buy Now</a>";
+						xxx += "</div><div class='col-md-3'>";
+						xxx += "<img src='" + item.product_img + "' style='height: 60px;'>";
+						xxx += "</div></div></div>";
+						xxx += "<div class='card-footer text-muted text-right'><small>from " + store + "</small></div></div></div>";
+
+						final += xxx;
+					}
+					final += "</div>";
+					$('.fill').append(final);
+					$('.owl-carousel').owlCarousel({
+						nav: true,
+						responsive: {
+							0: {
+								items: 1
+							},
+							600: {
+								items: 3
+							}
+						}
+					});
+				});
+		}
+	</script>
+</body>
+
+</html>

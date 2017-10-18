@@ -1,0 +1,30 @@
+html, body {
+	height: 100%;
+}
+.h-90 {
+	height: 90% !important;
+}
+.no-padding {
+	padding: 0;
+}
+.card-footer {
+	padding: 1px 7px 5px 0;
+}
+h6.dont-break {
+	
+	white-space: nowrap;
+    width: 100%;                   /* IE6 needs any width */
+    overflow: hidden;              /* "overflow" value must be different from  visible"*/ 
+    -o-text-overflow: ellipsis;    /* Opera < 11*/
+    text-overflow:    ellipsis;
+	
+	}
+.results {
+	    white-space:nowrap;
+    position:absolute;
+    -webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+
+}
