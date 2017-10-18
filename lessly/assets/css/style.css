@@ -28,3 +28,16 @@ h6.dont-break {
 	transition: all 1s ease-in-out;
 
 }
+.footer {
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.footer a {
+    color: #df1317;
+}
+span.heart {
+	color: #df1317;
+}
