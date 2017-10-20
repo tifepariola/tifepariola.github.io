@@ -1,4 +1,5 @@
 h2, h4 {
+	overflow-wrap: break-word;
 	font-weight: 300;
 }
 .p-top-20 {
