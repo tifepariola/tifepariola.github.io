@@ -1,0 +1,289 @@
+/* 
+    -------------------------------------------------------------------------------
+ *  Media Queries
+ *  -------------------------------------------------------------------------------
+ *  
+ *  This part contains the all changes that needed for elements for the Bootsrap
+ *  widths like iPhone image in About me section
+ *  
+ *  It's divided to the following sections:
+ *  
+ *     |
+       |-->   - Width between 1200px to 0
+       |-->   - Width between 767px to 0
+    -------------------------------------------------------------------------------
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/*  Start GLOBAL CSS Style Responsive
+/*-----------------------------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+
+    p.section-paragraph {
+        width: 100%
+    }
+    
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Start Navigation Menu
+/*-----------------------------------------------------------------------------------*/
+
+@media (max-width: 820px) {
+    
+    .menu-nav ul.nav.navbar-nav.navbar-right li:nth-child(1),
+    .menu-nav ul.nav.navbar-nav.navbar-right li:nth-child(2),
+    .menu-nav ul.nav.navbar-nav.navbar-right li:nth-child(3) {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    
+    .menu-nav ul.nav.navbar-nav.navbar-right li:nth-child(1),
+    .menu-nav ul.nav.navbar-nav.navbar-right li:nth-child(2),
+    .menu-nav ul.nav.navbar-nav.navbar-right li:nth-child(3) {
+        display: block;
+    }
+    
+    .menu-nav .navbar .navbar-collapse {
+        text-align: left;
+        background: white;
+    }
+    
+    .navbar-default .navbar-nav>li>a {
+        text-transform: capitalize;
+        color: black;
+    }
+    
+    .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+        color: #f2d47d;
+    }
+    
+    .menu-nav .navbar .navbar-nav {
+        display: block;
+        width: 100%;
+    }
+    
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Start Header Home  
+/*-----------------------------------------------------------------------------------*/
+
+@media (max-width: 800px) {
+    
+    .home .box-home h3 {
+        font-size: 50px;
+    }
+    
+    .home .box-home h2 {
+        font-size: 70px;
+    }
+    
+    .home .box-home p {
+        width: 70%;
+        margin: auto;
+    }
+    
+    .home .box-home p span.break-sox {
+        color: white;
+    }
+    
+    
+}
+
+@media (max-width: 800px) {
+    
+    .home .box-home h3 {
+        font-size: 46px;
+    }
+    
+    .home .box-home h2 {
+        font-size: 60px;
+    }
+    
+    .home .box-home p {
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    
+    .home .box-home p {
+        width: 100%;
+        margin: auto;
+        padding: 0 2%;
+    }
+    
+}
+
+@media (max-width: 530px) {
+    
+    .home .box-home h3 {
+        font-size: 40px;
+    }
+    
+    .home .box-home h2 {
+        font-size: 50px;
+    }
+    
+}
+
+@media (max-width: 414px) {
+    
+    .home .box-home h3 {
+        font-size: 37px;
+    }
+    
+    .home .box-home h2 {
+        font-size: 40px;
+    }
+    
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Start About   
+/*-----------------------------------------------------------------------------------*/
+
+@media (max-width: 1199px) {
+    
+    .about .box-info-about {
+        padding-left: 4%;
+    }
+    
+}
+
+@media (max-width: 1199px) {
+
+    .about .picture-personal img {
+        border-radius: 0;
+        height: 428px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .about .picture-personal img {
+        border-radius: 50%;
+        height: 400px;
+        width: 400px;
+    }
+    
+    .about .info-about h2 {
+        font-size: 40px;
+    }
+
+    .about .info-about h3 {
+        font-size: 25px;
+    }
+    
+    .about .info-about p {
+        width: 100%;
+    }
+
+} 
+
+@media (max-width: 630px) {
+    
+    .lines-about span.line:nth-child(4) {
+        left: 80%;
+    }
+
+}
+
+@media (max-width: 425px) {
+    
+    .about .picture-personal img {
+        border-radius: 50%;
+        height: 300px;
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 330px) {
+    
+    .about .picture-personal img {
+        margin-left: -2%;
+        height: 250px;
+        width: 250px;
+    }
+    
+    .about .info-about .network-social-about a {
+        margin: 10px;
+    }
+
+}
+
+@media (max-width: 260px) {
+    
+     .about .picture-personal img {
+        border-radius: 0;
+         margin-left: 0;
+        height: 280px;
+        width: 100%;
+    }
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Start Services   
+/*-----------------------------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+    
+    .services .box-service .service-item {
+        margin-bottom: 3%;
+    }
+    
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  Start Resume | Experience    
+/*-----------------------------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+    
+    .resume {
+        background-image: none;
+    }
+    
+    .resume .resume-item .box-resume-right .resume-right-item p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 595px) {
+    
+    .resume .resume-item .box-resume-left .resume-left-item h2 {
+        font-size: 23px;
+    }
+    
+    .resume .resume-item .box-resume-right .resume-right-item h2 {
+        font-size: 25px;
+    }
+    
+}
+
+@media (max-width: 330px) {
+    
+    .resume .resume-item .box-resume-right .resume-right-item h2 {
+        font-size: 20px;
+        line-height: 2;
+    }
+    
+}
+
+
+
+
+
+
+
+

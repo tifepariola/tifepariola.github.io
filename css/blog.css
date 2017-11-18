@@ -1,0 +1,344 @@
+/* 
+    -------------------------------------------------------------------------------
+
+    * Template Name: Oki Theme
+    * Template URI: 
+    * Author: Echafiai youssef
+    * Author URI: https://themeforest.net/user/manteqy_studio
+    * Description: Oki - Responsive HTML5 Landing Page Personal Template
+    * Version: 1.0
+    * License: GPL v2 or later
+    * License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+    * Tags: template, portfolio, marketing, designer, personal, Agency
+
+    -------------------------------------------------------------------------------
+*/
+
+/* 
+    -------------------------------------------------------------------------------
+
+    * 01. Start GENERAL STYLING
+    * 02. Start Navigation Bar | Menu
+    * 03. Start Header
+    * 04. Start Blog Design
+    * 05. Start Comments
+    * 06. Start Comments
+
+    -------------------------------------------------------------------------------
+*/
+
+/* *
+    * this is design page blog 
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/*  1 - Start GENERAL STYLING
+/*-----------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+textarea { 
+    resize: vertical;
+} 
+
+hr.line-title-left {
+    border-top: 2px solid #f1d37d;
+    width: 75px;
+    margin: 0 0 15px;
+}
+
+h3.title-discription {
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+h2.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 45px;
+    font-size: 35px;
+}
+
+.color-me {
+    color: #f1d37d;
+}
+
+.section-padding {
+    padding: 70px 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  2 - Start Navigation Bar | Menu 
+/*-----------------------------------------------------------------------------------*/
+
+.menu-nav {
+    margin-bottom: 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    padding-top: 10px;
+}
+
+.navbar-default .navbar-brand {
+    letter-spacing: 2px;
+    font-size: 35px;
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    text-transform: capitalize;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #f1d37d;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #f1d37d;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-brand span.color-point {
+    color: #d9bf77;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle {
+    transition: all 0.6s ease 0s;
+    border-color: #d9bf77;
+    background: #d9bf77;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #f2d47d;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  3 - Start Header Blog
+/*-----------------------------------------------------------------------------------*/
+
+.title-blog .overlay-blog {
+    background: rgba(0, 0, 0, 0.44);
+    position: absolute;
+    width: 100%;
+    height: 400px;
+}
+
+.title-blog .welcome-blog {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 400px;
+}
+
+.title-blog .welcome-blog h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 2;
+    font-size: 42px;
+    color: white;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.img-blog img {
+    height: 400px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  4 - Start Blog Design
+/*-----------------------------------------------------------------------------------*/
+
+.title-blog .title-post h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 55px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.info-blog .admin, 
+.info-blog .comments,
+.info-blog .time {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.info-blog .admin i.icon, 
+.info-blog .comments i.icon,
+.info-blog .time i.icon {
+    font-size: 16px;
+}
+
+.info-blog .admin p,
+.info-blog .comments p,
+.info-blog .time p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.box-content-post {
+    margin-top: 35px;
+}
+
+.title-blog .box-content-post img {
+    max-height: 450px;
+}
+
+.title-blog .box-content-post p {
+    line-height: 2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title-blog .tags {
+    margin-top: 20px;
+}
+
+.title-blog .tags p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-left: 1%;
+    font-size: 16px;
+}
+
+.title-blog .box-content-post p {
+    line-height: 2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.title-blog .categories h3 {
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+}
+
+.title-blog .categories p {
+    text-transform: capitalize;
+    display: inline-block;
+    background: #f6f6f6;
+    border-radius: 20px;
+    margin-left: 2%;
+    padding: 1% 2%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  5 - Start Comments
+/*-----------------------------------------------------------------------------------*/
+
+.form-comments form input {
+    float: left;
+    width: 49%;
+    margin-bottom: 3%;
+    margin-top: 10px;
+    background: transparent;
+    border-radius: 0;
+    border-color: #eeeeee;
+    color: #f1d37d;
+    transition: all 0.5s ease;
+    text-transform: capitalize;
+    padding: 20px 20px;
+}
+
+.form-comments form input:nth-of-type(2),
+.form-comments form input:nth-of-type(4) {
+    margin-right: 2%
+}
+
+.form-comments form textarea.form-control {
+    background: transparent;
+    border-radius: 0;
+    border-color: #eeeeee;
+    color: #f1d37d;
+    transition: all 0.5s ease;
+    text-transform: capitalize;
+    height: 230px;
+}
+
+.form-comments form button.btn.post-comment {
+    transition: all 0.5s ease 0s;
+    text-transform: capitalize;
+    background-color: #f1d37d;
+    border-radius: 0;
+    margin-top: 2%;
+    color: #404040;
+    padding: 15px;
+    width: 100%;
+}
+
+.form-comments form button.btn.post-comment:hover {
+    background: rgba(241, 211, 125, 0.85);
+}
+
+.form-comments form button.btn.post-comment:active,
+.form-comments form button.btn.post-comment:focus {
+    outline: 0;
+}
+
+.form-comments form .form-control:focus {
+    border-color: #f1d37d;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(241, 211, 125);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(241, 211, 125);
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  6 - Footer  
+/*-----------------------------------------------------------------------------------*/
+
+.footer {
+    background: #0e0d0d;
+    padding: 32px 0 22px 0;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
